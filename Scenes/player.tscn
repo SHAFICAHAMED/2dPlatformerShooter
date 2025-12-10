@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcs5d55a0npj5"]
+
+[ext_resource type="Script" uid="uid://oy2n6ivhhclr" path="res://Scenes/player.gd" id="1_v0iea"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f60y1"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_v0iea")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_f60y1")
+
+[node name="ShootTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
